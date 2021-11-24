@@ -4,8 +4,9 @@ from scipy.special import comb
 #
 # Implement a "run test" using information on the sign and ordering of 
 # the bin-by-bin residuals read from a file. 
-# This test is complementary to the chi-squared test  
-# as it uses the signs of the deviations and the ordering of such deviations.
+# This test is complementary to and independent from the chi-squared test.  
+# It uses the signs of the deviations and the ordering of such deviations; both
+# are absent from the chi-squared statistic definition.
 #
 # The underlying original reference appears to be 
 # A. Wald and J. Wolfowitz (1940), "On a test whether two samples are from the 
