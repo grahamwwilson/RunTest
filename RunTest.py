@@ -12,9 +12,8 @@ from scipy.special import comb
 # same population", Ann. Math. Statist. 11, 147-162. 
 # There seem be a number of related applications 
 # (like heads/tails or runs of increasing/decreasing values). 
-# Here I focused simply on whether the bin
-# I found that the text-books by Barlow, James, and Behnke are good 
-# starting points.
+# Here I focused simply on whether the bin deviation was +ve or -ve.
+# The books by Barlow, James, and Behnke have good introductory discussions.
 #
 # Note that this statistical test should only be used in principle for 
 # simple hypotheses. Example: those with no parameters being fitted to the data.
