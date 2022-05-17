@@ -7,7 +7,7 @@ def getArgs(argv=None):
 # Set command line configurable parameters. Do python3 program.py -h to see this in action.
     parser = ArgumentParser(description="Calculate Wald-Wolfowitz Run Test p-value")
     parser.add_argument("-f", "--file", type=str, default="TestData/Residuals.dat", help="Input file")
-    parser.add_argument("-i", "--info", type=int, default=0, help="Verbosity level (0, 1, 2)")   
+    parser.add_argument("-i", "--info", type=int, default=0, help="Verbosity level (0, 1, 2, 3)")   
          
     args=parser.parse_args(argv)
     print('(runTestArgs.getArgs     ) Found argument list: ',args)

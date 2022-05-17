@@ -51,7 +51,7 @@ for i in range(0,residuals.size):
     if value != previous:
        nrun += 1
        previous = value
-    if infolevel > 0:
+    if infolevel > 1:
        print(i,residual,nrun)       
        
 # Summarize observations
@@ -88,13 +88,13 @@ for i in range(0,r+1):
     if i%2 == 0:          #even
        s = int(i/2)
        p = float(2*comb(NA-1,s-1,True)*comb(NB-1,s-1,True)/denom)
-       if infolevel>1:
+       if infolevel>2:
           print('Even: i,s,p = ',i,s,p)
        psum += p
     else:                 #odd
        s = int((i+1)/2)
        p = float((comb(NA-1,s-2,True)*comb(NB-1,s-1,True) + comb(NA-1,s-1,True)*comb(NB-1,s-2,True))/denom)
-       if infolevel>1:
+       if infolevel>2:
           print('Odd : i,s,p = ',i,s,p)
        psum += p
 print('Run test p-value for robs <= ',r,' is ',100.0*psum,'(%)')
