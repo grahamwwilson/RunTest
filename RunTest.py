@@ -1,6 +1,9 @@
 import numpy as np
 from scipy import stats
 from scipy.special import comb
+import runTestArgs
+import myPythonCheck
+
 #
 # Implement a "run test" using information on the sign and ordering of 
 # the bin-by-bin residuals read from a file. 
@@ -24,15 +27,15 @@ from scipy.special import comb
 #              Graham W. Wilson,  24-NOV-2021
 #
 
-# Set info level. Quiet mode (0), Data info (1), Calc details too (2).
-infolevel = int(0)    # set to 1 or 2 if you want more details
-print('Info level set to ',infolevel)
+myPythonCheck.Check()                         # Enforce use of python3
+
+filename, infolevel = runTestArgs.getArguments(None)
+runTestArgs.showArgs(filename, infolevel)
 
 # Read residuals data into numpy array
-filename='TestData/residuals.dat'
-print('Reading residual values from',filename)
 residuals = np.genfromtxt(filename,usecols=(0),unpack=True)
-print(residuals)
+if infolevel > 0: 
+    print(residuals)
 
 # Count runs
 npos=0
